@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- head 에 있는 것들을 metadata라고 부름 -> 데이터를 설명하는 데이터 -->
+    <!-- <meta> : 문서 레벨 메타데이터 요소 -->
+    <meta charset="UTF-8" />
+    <!-- charset : 페이지의 문자 인코딩을 선언 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- viewport : 뷰포트의 초기 사이즈에 대한 힌트. 모바일 장치에서만 사용 -->
+    <!-- content = "width=device ..." 렌더링 하고자 하는 넓이, 장치 너비, 가로모드와 뷰포트 너비의 비율을 정의 -->
+    <title>Document</title>
+    <!-- title : 문서 제목 요소, 브라우저의 제목 표시줄이나 페이지 탭에 보이는 문서 제목을 정의 -->
+  </head>
+  <!-- link : 외부 리소스 연결 요소 : 외부 리소스의 관계를 명시 ( 스타일 시트연결할 때 가장 많이 사용 ) -->
+  <link rel="stylesheet" href="" />
+  <!-- MIME 타입 : 타입을 명시해줌 ( text로 이루어진 css파일 ) -->
+  <link rel="stylesheet" href="" type="text/css" />
+  <!-- style : 스타일 정보 요소 : 권장하지 않는 방법 ( 외부에서 불러오기 ) -->
+  <style>
+    p {
+      color: red;
+    }
+  </style>
+  <!-- script : 스크립트 요소 : 데이터와 실행 가능한 코드를 문서에 포함할 때 사용하며 보통 JS 코드와 함께 사용 -->
+  <!-- head에 적어도 되지만 body의 마지막에 위치해 마지막에 실행하게 하는 걸 추천 -->
+  <script>
+    alert("Hello world!");
+  </script>
+  <body>
+    <p>hi</p>
+  </body>
+</html>

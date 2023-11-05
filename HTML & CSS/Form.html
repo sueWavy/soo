@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <form> 요소는 정보를 제출하기 위한 대화형 컨트롤을 포함하는 문서 구획을 나타냅니다. -->
+    <h3>Form</h3>
+    <form action="https://server.com/join" method="get">
+      <!-- action = 목적지의 주소가 들어감 / 상대경로도 가능 -->
+      <!-- method = post 양식 데이터를 요청 본문으로 전송, 주소창에 내용이 나오지 않게 숨겨서 보냄 -->
+      <!-- method = get 양식 데이터를 action URL 과 ? 구분자 뒤에 붙여서 전송 ( 주소란을 보고 확인 ) 보안성 중요 ( 검색이나 키워드에 사용 ) -->
+      <div>
+        <label for="name">이름 적어요</label>
+        <input type="text" name="name" id="name" required />
+        <button type="submit">제출</button>
+      </div>
+    </form>
+
+    <!-- input 유형 -->
+    <input type="text" />
+    <input type="checkbox" />
+    <input type="color" />
+    ... 등등 <br /><br />
+
+    <button>버튼</button> <br /><br />
+
+    <!-- label 유형 : 이름 붙여주기 -->
+    <form action="" method="GET">
+      <label for="food">음식 이름</label>
+      <input
+        name="food"
+        id="foodname"
+        type="text"
+        placeholder="음식을 적으세요"
+      />
+      <button type="submit">제출</button>
+    </form>
+
+    <br />
+
+    <!-- fieldset 필드셋 요소 : 웹 양식의 여러 컨트롤과 레이블을 묶을 때 사용 -->
+    <form action="">
+      <fieldset>
+        <legend>너의 무엇을 고르시오</legend>
+        <div>
+          <label for="1">A</label>
+          <input type="radio" id="1" name="A" />
+        </div>
+        <div>
+          <label for="2">B</label>
+          <input type="radio" id="2" name="B" />
+        </div>
+        <div>
+          <label for="3">C</label>
+          <input type="radio" id="3" name="C" />
+        </div>
+      </fieldset>
+    </form>
+
+    <br />
+
+    <!-- input 요소 : 속성 많음 -->
+
+    <form action="">
+      <input type="text" minlength="5" maxlength="10" placeholder="텍스트" />
+      <input type="password" placeholder="패스워드" />
+      <input type="email" placeholder="이메일" />
+      <input type="number" placeholder="숫자" />
+      <input type="range" />
+      <input type="checkbox" />
+      <input type="radio" />
+      <input type="date" />
+      <input type="file" />
+      <input type="image" />
+
+      <br /><br />
+
+      <button type="button">버튼</button>
+      <button type="menu">메뉴</button>
+      <button type="reset">리셋</button>
+      <button type="submit">서브밋</button>
+    </form>
+
+    <br />
+
+    <textarea name="" id="" cols="30" rows="10">start . . . </textarea>
+
+    <br /><br />
+
+    <form action="">
+      <input type="text" autocomplete="on" placeholder="name" />
+      <input type="text" placeholder="필수" required />
+      <input type="text" placeholder="비활성" disabled />
+      <input type="text" placeholder="읽기만하쇼" readonly />
+      <button type="submit">제출</button>
+    </form>
+    <br />
+
+    <div>
+      <label for="score">평점 :</label>
+      <input type="number" id="score" min="0" max="5" />
+      <input type="number" id="score" min="0" max="10" step="2" />
+      <input type="range" id="score" min="0" max="10" step="2" />
+    </div>
+    <br />
+
+    <form action="">
+      <label for="numberList">숫자</label>
+      <select name="number" id="numberList" required>
+        <optgroup>
+          <option value="">please choice</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </optgroup>
+        <optgroup>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+        </optgroup>
+      </select>
+      <button type="submit">sub</button>
+    </form>
+    <br />
+
+    <form action="" method="get">
+      <label for="moive">좋아하는 영화</label>
+      <input type="text" id="moive" name="movie" list="movie-list" />
+      <datalist id="movie-list">
+        <option value="액션">액션</option>
+        <option value="멜로">멜로</option>
+        <option value="SF">SF</option>
+        <option value="호러">호러</option>
+      </datalist>
+    </form>
+  </body>
+</html>

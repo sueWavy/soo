@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 전역 속성 -->
+    <!-- id : 고유식별자(ID)를 정의 목적은 요소를 가리킬 때와 스크립트 및 스타일 적용시 특정 요소를 식별하기 위함 -->
+    <div id="box1">Box1</div>
+    <div id="box2">Box2</div>
+    <div id="box3">Box3</div>
+
+    <!-- class : 식별자 : 여러개의 요소들을 선택가능 (공백으로 구분하여 여러개의 요소를 가질 수 있다) -->
+    <div class="hi">반갑다</div>
+    <div class="hello">반갑다</div>
+    <div class="hi hello">반갑다</div>
+
+    <!-- style : 요소에 적용할 CSS 스타일 선언 ( 인라인 스타일 ) -->
+    <p style="color: blue">나 스타일리쉬</p>
+    <div style="border: 1px solid black">오</div>
+
+    <!-- title : 요소와 관련된 추가 정보를 제공하는 텍스트를 나타냅니다 -->
+    <div>
+      <div title="첫 요소">hi</div>
+      <div title="두번 째 요소">nice meet u</div>
+    </div>
+
+    <!-- lang : 요소 내 수정 불가능한 텍스트의 언어와 수정 가능한 텍스트가 사용해야 하는 언어를 정의 -->
+    <p lang="en">English bro.</p>
+
+    <!-- data : 확정된 의미는 갖지 않는 데이터에 대한 확장 가능성, 의미론적 표준 HTML 요소에 추가 정보를 저장할 수 있도록 해줌 -->
+    <article
+      id="electriccars"
+      data-columns="3"
+      data-index-number="12314"
+      data-parent="cars"
+    >
+      ...
+    </article>
+
+    <!-- draggable : 요소의 드래그 가능 여부를 나타내는 열거형 특성 (true/false) -->
+    <img
+      src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbB0VMz%2FbtszKAGEMIn%2FzLz7nHDb8eGXkM46f9Pic1%2Fimg.webp"
+      alt="image"
+      width="300"
+      draggable="false"
+    />
+
+    <!-- hidden : 해당 요소가 아직, 또는 더 이상 관련이 없음을 나타내는 불리언 특성 (Elements에서 사라지는 것은 아님 온리 시각적으로만 보안주의) -->
+    <p>보이지롱</p>
+    <p hidden>안보이지롱</p>
+  </body>
+</html>

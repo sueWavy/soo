@@ -1,0 +1,29 @@
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 90px;
+  background-color: greenyellow;
+  font-size: x-large;
+
+  transition-property: all;
+  transition-duration: 3s;
+  transition-delay: 1s;
+  transition-timing-function: linear;
+
+  /* 
+    ease
+    ease-in
+    ease-out
+    ease-in-out
+    linear
+    cubic-bezier(, , , )
+  */
+}
+
+.box:hover {
+  background-color: red;
+  color: white;
+  height: 400px;
+}

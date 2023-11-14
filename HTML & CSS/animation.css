@@ -1,0 +1,177 @@
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  border-radius: 100%;
+  margin-bottom: 100px;
+
+  /* animation: my-first-animation 1s infinite alternate; */
+  animation: my-first-animation2 2s infinite;
+
+  /* hover 에도 사용 가능 */
+}
+
+@keyframes my-first-animation {
+  from {
+    width: 200px;
+  }
+  to {
+    width: 400px;
+  }
+}
+
+@keyframes my-first-animation2 {
+  0% {
+    font-size: 20px;
+  }
+  50% {
+    border-radius: 0;
+    font-size: 100px;
+  }
+  100% {
+    font-size: 20px;
+  }
+}
+
+.box2 {
+  width: 50px;
+  height: 50px;
+  background-color: aquamarine;
+
+  animation: my-jump 1s;
+  animation-delay: -0.3s;
+  animation-iteration-count: 3;
+}
+
+.box3 {
+  width: 50px;
+  height: 50px;
+  background-color: blueviolet;
+  animation: my-jump 1s;
+  animation-delay: 0;
+  animation-iteration-count: 5;
+}
+
+.box4 {
+  width: 50px;
+  height: 50px;
+  background-color: bisque;
+
+  animation: my-jump 1s;
+  animation-delay: 0.3s;
+  animation-iteration-count: 7;
+}
+
+@keyframes my-jump {
+  0% {
+    font-size: 20px;
+  }
+  50% {
+    width: 300px;
+    font-size: 40px;
+  }
+  100% {
+    font-size: 20px;
+  }
+}
+
+/* animation-direction */
+.ani {
+  /* 기본값 : 정방향 재생 - 순환시 시작 상태로 재설정 */
+  animation-direction: normal;
+
+  /* 역방향 재생 - 순환시 종료 상태로 재설정 (ease-in -> ease-out) */
+  animation-direction: reverse;
+
+  /* 사이클마다 각 주기의 방향을 뒤집으며 첫 번째 반복은 정방향 진행 - 짝수, 홀수 카운트 */
+  animation-direction: alternate;
+
+  /* 사이클마다 각 주기의 방향을 뒤집으며 첫 번째 반복은 역방향으로 진행 */
+  animation-direction: alternate-reverse;
+
+  /* multiple animation */
+  animation-direction: normal, reverse;
+  animation-direction: alternate, normal, reverse;
+
+  /* Global values  */
+  animation-direction: inherit;
+  animation-direction: initial;
+  animation-direction: unset;
+}
+
+.box5 {
+  margin-top: 100px;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 50%;
+
+  animation-name: rotate;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-play-state: paused;
+}
+
+.box5:hover {
+  /* animation-play-state: paused; */
+  animation-play-state: running;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* animation-fill-mode 애니메이션 실행 전과 후의 대상 스타일 적용 - 기본값 none */
+.ani {
+  /* Single animation */
+
+  /* none : 애니메이션은 실행되지 않을 때 대상에 스타일을 적용 X */
+  animation-fill-mode: none;
+
+  /* 실행된 애니메이션의 마지막 keyframe에 의해 설정된 계산 값 유지  */
+  animation-fill-mode: forwards;
+
+  /* 애니메이션은 대상에 적용되는 즉시 첫 번째 관련 keyframe에 정의 된 값 적용 후 delay 동안 값을 유지*/
+  animation-fill-mode: backwards;
+
+  /* 애니메이션은 양쪽 모두의 규칙을 따르므로 속성이 양방향으로 확장 */
+  animation-fill-mode: both;
+
+  /* Multiple animations */
+  animation-fill-mode: none, backwards;
+  animation-fill-mode: both, forwards, none;
+}
+
+.box6 {
+  margin-top: 100px;
+  width: 100px;
+  height: 100px;
+  border: 10px solid green;
+  background-color: yellow;
+
+  animation: fill-mode 3s linear 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fill-mode {
+  0% {
+    background-color: greenyellow;
+  }
+  50% {
+    width: 200px;
+  }
+  100% {
+    background-color: black;
+  }
+}

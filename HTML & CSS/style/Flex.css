@@ -6,19 +6,153 @@
   main axis, cross axis
 */
 
+/* flex-box */
+
 .container {
   border: 5px dashed orange;
   display: flex;
-  /* flex-direction: column; */
+  /* flex-direction: row-reverse; */
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .item {
-  width: 50px;
+  width: 100px;
   height: 50px;
   background-color: bisque;
   border: 1px solid black;
-
+  margin: 5px;
   /* display: inline-block; */
   /* float: left; */
+}
+
+/* flex-order */
+
+.container2 {
+  border: 5px dashed green;
+  display: flex;
+  margin-top: 50px;
+
+  justify-content: space-between;
+}
+
+.item2 {
+  width: 100px;
+  height: 50px;
+  background-color: aquamarine;
+  border: 1px solid black;
+  margin: 5px;
+}
+
+.item2:nth-child(3) {
+  order: 1;
+}
+
+.item2:nth-child(5) {
+  order: 8;
+}
+
+.item2:nth-child(2) {
+  order: 2;
+}
+
+/* flex-wrap, grow */
+
+.container3 {
+  border: 5px dashed red;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.item3 {
+  width: 50px;
+  height: 50px;
+  background-color: palevioletred;
+  border: 1px solid black;
+  margin: 5px;
+}
+
+.item3:nth-child(2) {
+  flex-grow: 2;
+}
+
+.item3:nth-child(3) {
+  flex-grow: 1;
+}
+
+/* flex-shrink */
+
+.container4 {
+  border: 5px dashed blue;
+  display: flex;
+  margin-top: 50px;
+}
+
+.item4 {
+  width: 400px;
+  height: 50px;
+  background-color: skyblue;
+  border: 1px solid black;
+  margin: 5px;
+}
+
+.item4:nth-child(1) {
+  flex-shrink: 0;
+}
+
+.item4:nth-child(3) {
+  flex-shrink: 2;
+}
+
+/* flex-basis */
+
+.container5 {
+  border: 5px dashed blueviolet;
+  display: flex;
+  margin-top: 50px;
+}
+
+.item5 {
+  height: 50px;
+  background-color: chocolate;
+  border: 1px solid black;
+  font-size: 30px;
+  margin: 5px;
+
+  flex-grow: 1;
+  /* 늘어나는 영역이 1:1:1 */
+
+  flex-basis: 0;
+  /* 각자 동일하게 크기를 가지게 된다. */
+}
+
+.item5:nth-child(1) {
+  flex-grow: 5;
+}
+
+.item5:nth-child(2) {
+  flex-grow: 1;
+}
+
+.item5:nth-child(3) {
+  flex-grow: 3;
+}
+
+/* item-flex (shorthand) */
+.container6 {
+  border: 5px dashed yellowgreen;
+  display: flex;
+  margin-top: 50px;
+}
+
+.item6 {
+  /* grow-shrink-basis(0) */
+  /* grow-shrink(num) */
+  /* grow-basis(px) */
+  flex: 1;
+  background-color: cadetblue;
+  border: 1px solid black;
+  font-size: 30px;
+  margin: 5px;
 }

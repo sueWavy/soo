@@ -1,0 +1,62 @@
+/* grid-auto */
+.container {
+  border: 5px dashed orange;
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 150px 80px;
+
+  /* 암시적으로 추가로 들어올 요소에 대해 값 지정 */
+  grid-auto-rows: 100px;
+  /* grid-auto-columns: 50px; */
+}
+
+.item {
+  background-color: blanchedalmond;
+  border: 3px solid blue;
+  font-size: 24px;
+}
+
+/* grid-auto-flow */
+.container2 {
+  margin-top: 100px;
+  border: 5px dashed orange;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  /* row 기본 값 */
+  grid-auto-flow: dense;
+}
+
+.item2 {
+  background-color: blanchedalmond;
+  border: 3px solid blue;
+  font-size: 24px;
+}
+
+.item2:nth-child(2) {
+  grid-column: span 3;
+}
+
+/* grid-shorthand */
+
+.container3 {
+  margin-top: 100px;
+  border: 5px dashed orange;
+  display: grid;
+
+  /* grid-template-rows: 1fr 2fr; */
+  /* grid-template-columns: 100px 200px; */
+
+  /* 앞에가 row / 뒤에가 column */
+  /* grid: 1fr 2fr / 100px 200px; */
+
+  grid: auto-flow / 1fr 2fr;
+}
+
+.item3 {
+  background-color: blanchedalmond;
+  border: 3px solid blue;
+  font-size: 24px;
+}

@@ -1,0 +1,84 @@
+/* 
+    Grid
+    Container - display
+*/
+
+.container {
+  border: 5px dashed orange;
+  display: grid;
+
+  /* fr : 비율로 값을 지정 */
+  /* 몇개의 컬럼을 ( 열 크기 ) 만들 것인지 ? */
+  grid-template-columns: 2fr 1fr;
+
+  /* 몇개의 로우를 ( 행 크기 ) 만들 것인지 ? */
+  /* grid-template-rows: 1fr 1fr 1fr; */
+
+  /* 좀 더 간단하게 표현하는 법 ( 갯수 모름 ) */
+  grid-template-rows: repeat(3, 1fr);
+  /* 1fr 을 3번 반복할거다 = 1fr 1fr 1fr */
+}
+
+.item {
+  background-color: blanchedalmond;
+  border: 3px solid blue;
+  font-size: 30px;
+}
+
+.container2 {
+  margin-top: 50px;
+  width: 400px;
+  height: 400px;
+  border: 5px solid black;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    ". h h h h"
+    "m m m s s"
+    "m m m s s"
+    "f f f f .";
+}
+
+.item2 {
+  background-color: bisque;
+  border: 1px solid red;
+  font-size: 24px;
+}
+
+.header {
+  grid-area: h;
+}
+
+.main {
+  grid-area: m;
+}
+
+.sidebar {
+  grid-area: s;
+}
+
+.footer {
+  grid-area: f;
+}
+
+.container3 {
+  margin-top: 50px;
+  border: 5px dashed black;
+  width: 400px;
+  height: 400px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  /* row-gap: 20px; */
+  /* column-gap: 40px; */
+  gap: 20px 40px;
+}
+
+.item3 {
+  background-color: antiquewhite;
+  border: 3px solid blue;
+  font-size: 24px;
+}

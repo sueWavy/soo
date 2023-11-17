@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  border: 1px solid blue;
+  padding: 20px 0;
+}
+
+nav {
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+}
+
+span {
+  margin-left: 5px;
+  font-size: 0.7rem;
+  color: gray;
+}
+
+main {
+  border: 1px solid orange;
+  margin-top: 15px;
+}
+
+.container1,
+.container2,
+.container3 {
+  display: grid;
+  gap: 10px;
+}
+
+.container1 {
+  margin-bottom: 10px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.container2 {
+  margin-bottom: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.container3 {
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+.item {
+  border: 1px solid olive;
+  height: 170px;
+  position: relative;
+
+  overflow: hidden;
+}
+
+.item:hover {
+  border: 1px solid blue;
+}
+
+.btn {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 11px;
+
+  background-color: #e2e2e2;
+  color: white;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background-color: blue;
+  width: 80px;
+  transition: all 0.2s;
+}
+
+.btn:hover::before {
+  content: "구매하기 ";
+  margin-right: 5px;
+}

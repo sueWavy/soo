@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+
+      div::before {
+        content: "Before content ";
+        color: red;
+      }
+
+      div::after {
+        content: " After content";
+        color: green;
+      }
+
+      pre::first-line {
+        font-weight: bold;
+        color: brown;
+      }
+
+      li:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="color: blue">나는 그냥 내용</div>
+    <pre style="margin-top: 2rem">
+        첫번째줄
+        두번째줄
+        세번째줄
+    </pre>
+    <ul style="margin-top: 2rem; border: 1px solid black">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+    </ul>
+  </body>
+</html>

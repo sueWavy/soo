@@ -1,0 +1,121 @@
+/* CSS 작성 */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&display=swap");
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+header {
+  padding: 10px;
+}
+
+.box {
+  margin-bottom: 50px;
+}
+
+.sub-title {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.sub-title h3 {
+  font-family: var(--couFont);
+  font-weight: 500;
+}
+
+.sub-title h6 {
+  font-family: var(--couFont);
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--couGray);
+}
+
+.sub-title h3::after {
+  content: "|";
+  margin-left: 10px;
+  margin-right: 10px;
+  color: var(--couGray);
+}
+
+.container {
+  position: relative;
+  float: left;
+  border: 1px solid var(--couGray);
+  margin: 10px 10px;
+}
+
+.clear {
+  clear: both;
+}
+
+.container2 {
+  position: relative;
+  float: left;
+  border: 1px solid var(--couGray);
+  margin: 10px 8.9px;
+}
+
+.container3 {
+  position: relative;
+  float: left;
+  margin: 10px 10px;
+
+  border: 1px solid var(--couGray);
+}
+
+.item1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 502px;
+  height: 310px;
+}
+
+.item2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 243px;
+  height: 310px;
+}
+
+.btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--couGray);
+  color: var(--couWhite);
+  width: 42px;
+  height: 42px;
+  bottom: 20px;
+  left: 20px;
+}
+
+.btn:hover::before {
+  font-family: var(--couFont);
+  font-weight: 400;
+  margin-right: 15px;
+  content: "구매하기";
+}
+
+.btn:hover {
+  width: 112px;
+  background-color: var(--couBlue);
+}
+
+.container:hover,
+.container2:hover,
+.container3:hover {
+  border: 1px solid var(--couBlue);
+}
+
+.container:focus,
+.container2:focus,
+.container3:focus {
+  border: 1px solid var(--couBlue);
+}

@@ -1,0 +1,12 @@
+/* Theme 스타일 작성 */
+
+:root {
+  --couRed: #e52330;
+  --couBlue: #0096e4;
+  --couYellow: #c7cd1d;
+  --couBlack: #181818;
+  --couGray: #c4c4c4;
+  --couWhite: #ffffff;
+
+  --couFont: "Noto+Sans+KR";
+}

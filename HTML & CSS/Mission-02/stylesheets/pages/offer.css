@@ -1,0 +1,116 @@
+/* 오늘의 쇼핑 제안 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+header {
+  margin-bottom: 48px;
+}
+
+.sub-title {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.sub-title h3 {
+  font-weight: 300;
+}
+
+.logo {
+  width: 176px;
+  height: 40px;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  width: 1020px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: polygon(0 0, 0 0, 0 0);
+  border: 0;
+}
+
+.itemCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 200px;
+  height: 270px;
+}
+
+.sale {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+
+  width: 53px;
+  height: 30px;
+
+  color: white;
+  background-color: var(--color-red-500);
+}
+
+.text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 172px;
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 12px;
+}
+
+.delivery-kind {
+  color: var(--color-gray-700);
+}
+
+.review {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  margin-top: 12px;
+  width: 172px;
+}
+
+.review span {
+  color: var(--color-gray-500);
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.ranks {
+  height: 12px;
+}

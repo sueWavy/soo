@@ -119,3 +119,7 @@ header {
 .container3:focus {
   border: 1px solid var(--couBlue);
 }
+
+.font {
+  font-family: "Noto Sans KR", sans-serif;
+}

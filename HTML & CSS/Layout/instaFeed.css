@@ -1,0 +1,147 @@
+body {
+  background-color: #c6c6c6;
+  margin: 0px;
+}
+
+p {
+  margin: 0px;
+}
+
+.wrap {
+  background-color: white;
+  width: 375px;
+  height: 100vh;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+}
+
+.instagram {
+  width: 100%;
+  height: 550px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 375px 1fr;
+  grid-template-areas: "header" "img" "footer";
+
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+
+header {
+  grid-area: header;
+  width: auto;
+  height: 100%;
+
+  margin: 5px 10px;
+  font-weight: bold;
+}
+
+.header-left {
+  float: left;
+  display: flex;
+  align-items: center;
+}
+
+.header-left img {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.header-right {
+  float: right;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.header-right p {
+  cursor: pointer;
+  user-select: none;
+}
+
+.img {
+  clear: both;
+  grid-area: img;
+  width: 100%;
+  height: 100%;
+  /* 
+  background-image: url(../assets/img/chicken-4110212_1920.jpg);
+  background-size: cover; */
+}
+
+footer {
+  grid-area: footer;
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 50px auto auto;
+  grid-template-areas:
+    "top-left top-center top-right"
+    "like like like"
+    "comment comment comment";
+}
+
+.top-left {
+  grid-area: top-left;
+  display: flex;
+  font-size: 10px;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.top-center {
+  grid-area: top-center;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-center ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0px;
+  width: 50%;
+}
+
+.top-center li {
+  width: 4px;
+  height: 4px;
+  background-color: lightgray;
+  border-radius: 50%;
+}
+
+.top-center li:nth-child(1) {
+  background-color: blue;
+}
+
+.top-right {
+  grid-area: top-right;
+  display: flex;
+  font-size: 10px;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.like {
+  grid-area: like;
+  font-size: 12px;
+  margin: 0 10px;
+}
+
+.comment {
+  grid-area: comment;
+  font-size: 10px;
+  margin: 0 10px;
+}

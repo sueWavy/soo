@@ -96,6 +96,19 @@ footer {
   justify-content: space-around;
 }
 
+.top-left span {
+  cursor: pointer;
+}
+
+.top-left span:nth-child(1):hover {
+  color: red;
+}
+
+#fill-heart {
+  display: none;
+  color: red;
+}
+
 .top-center {
   grid-area: top-center;
   display: flex;

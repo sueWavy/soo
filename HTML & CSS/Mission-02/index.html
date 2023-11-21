@@ -15,14 +15,19 @@
     <link rel="stylesheet" href="stylesheets/main.css" />
   </head>
   <body>
-    <header>
-      <h1>
-        <a href="https://www.coupang.com/" target="_blank">
-          <img class="logo" src="./assets/logo/logo.png" alt="Logo" />
-        </a>
-      </h1>
+    <div class="wrapper">
+      <header>
+        <h1>
+          <a href="https://www.coupang.com/" target="_blank">
+            <picture>
+              <source srcset="./assets/logo/logo.png" />
+              <img class="logo" src="./assets/logo/logo.png" alt="Logo" />
+            </picture>
+          </a>
+        </h1>
+      </header>
       <section class="sub-title">
-        <img src="./assets/icon/shopping.svg" />
+        <div class="shop"></div>
         <h3>오늘의 쇼핑 제안</h3>
       </section>
       <main>
@@ -157,6 +162,6 @@
           </div>
         </a>
       </main>
-    </header>
+    </div>
   </body>
 </html>

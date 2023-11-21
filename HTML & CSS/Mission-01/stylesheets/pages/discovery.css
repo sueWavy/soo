@@ -96,22 +96,24 @@ header {
   left: 20px;
 }
 
-.btn:hover::before {
-  font-family: var(--couFont);
-  font-weight: 400;
-  margin-right: 15px;
-  content: "구매하기";
-}
-
-.btn:hover {
-  width: 112px;
-  background-color: var(--couBlue);
-}
-
 .container:hover,
 .container2:hover,
 .container3:hover {
+  transition: all 0.1s;
+
   border: 1px solid var(--couBlue);
+
+  .btn {
+    width: 112px;
+    background-color: var(--couBlue);
+  }
+
+  .btn::before {
+    font-family: var(--couFont);
+    font-weight: 400;
+    margin-right: 15px;
+    content: "구매하기";
+  }
 }
 
 .container:focus,

@@ -9,11 +9,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.wrapper {
   padding-top: 100px;
+  border: 1px solid skyblue;
 }
 
 header {
   margin-bottom: 48px;
+  border: 1px solid red;
 }
 
 .sub-title {
@@ -21,6 +26,14 @@ header {
   align-items: center;
   font-size: 24px;
   margin-bottom: 24px;
+  border: 1px solid blue;
+}
+
+.shop {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+  background-image: url(../../assets/icon/shopping.svg);
 }
 
 .sub-title h3 {
@@ -36,6 +49,7 @@ main {
   display: flex;
   justify-content: space-around;
   width: 1020px;
+  border: 1px solid green;
 }
 
 .sr-only {
@@ -59,6 +73,8 @@ main {
 
   width: 200px;
   height: 270px;
+
+  border: 1px solid tomato;
 }
 
 .sale {

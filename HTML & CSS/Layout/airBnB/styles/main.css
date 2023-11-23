@@ -1,0 +1,134 @@
+.wrap {
+  background-color: white;
+  width: 80%;
+  max-width: 1920px;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+header {
+  position: relative;
+  text-align: center;
+  background-color: black;
+
+  padding-top: 20px;
+}
+
+header a {
+  color: white;
+  font-weight: bold;
+}
+
+header .gnb {
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "logo gnb-menu menu"
+    "search search search";
+  color: white;
+}
+
+header .gnb img {
+  width: 102px;
+  height: 32px;
+}
+
+header .gnb .logo {
+  grid-area: logo;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+header .gnb .gnb-menu {
+  grid-area: gnb-menu;
+  display: flex;
+  align-items: center;
+}
+
+header .gnb .gnb-menu ul {
+  display: flex;
+  width: 70%;
+  justify-content: space-evenly;
+  margin: 0 auto;
+}
+
+header .gnb .gnb-menu ul li {
+  position: relative;
+  font-weight: bold;
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+
+header .gnb .gnb-menu ul li:hover::before {
+  content: "";
+  height: 2px;
+  width: 5px;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+header .gnb .gnb-menu ul li:hover {
+  color: gray;
+}
+
+header .gnb .gnb-menu ul .active:hover {
+  color: white;
+}
+
+header .gnb .gnb-menu ul .active::before {
+  content: "";
+  height: 2px;
+  width: 15px;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+header .gnb .gnb-menu ul .active:hover::before {
+  content: "";
+  height: 2px;
+  width: 15px;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+header .gnb .menu {
+  grid-area: menu;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+header .gnb .search {
+  grid-area: search;
+}
+
+header .gnb .menu * {
+  margin-left: 10px;
+}
+
+header .gnb .menu .profile {
+  background-color: white;
+  color: gray;
+  padding: 10px 10px;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+.gnb-menu .menu:nth-child(1) {
+  margin-left: 0px;
+}
+
+.gnb-menu .menu p {
+  margin-left: 0px;
+}

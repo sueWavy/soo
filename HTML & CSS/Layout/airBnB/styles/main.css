@@ -3,15 +3,33 @@
   width: 80%;
   max-width: 1920px;
   margin: 0 auto;
-  border: 1px solid black;
+  overflow: hidden;
 }
+
+@media screen and(max-width:767px) {
+  .wrap {
+    width: 90%;
+  }
+}
+
+.black-bg {
+  background-color: black;
+  width: 100%;
+  height: 1000px;
+  left: 0;
+
+  position: absolute;
+  z-index: 1;
+}
+
+/* header */
 
 header {
   position: relative;
   text-align: center;
-  background-color: black;
 
   padding-top: 20px;
+  z-index: 10;
 }
 
 header a {
@@ -113,6 +131,7 @@ header .gnb .menu {
 
 header .gnb .search {
   grid-area: search;
+  margin-top: 20px;
 }
 
 header .gnb .menu .profile {
@@ -180,4 +199,214 @@ header .gnb .menu .menu-hover:hover {
   color: gray;
   font-size: 12px;
   font-weight: normal;
+}
+
+/* notice */
+
+.notice {
+  background-color: #ff385c;
+  border-radius: 14px;
+  text-align: center;
+  height: 320px;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 10;
+}
+
+.notice p {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+  line-height: 1.8rem;
+
+  margin-bottom: 2rem;
+}
+
+.notice button {
+  border: 1px solid white;
+  padding: 5px 15px;
+  background-color: inherit;
+  color: white;
+  cursor: pointer;
+  border-radius: 14px;
+}
+
+/* main-banner */
+
+.main-banner {
+  height: 600px;
+  border-radius: 14px;
+  border: 1px solid black;
+  padding-bottom: 20px;
+  position: relative;
+  z-index: 10;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
+  background-image: url(https://cdn.pixabay.com/photo/2016/05/02/09/45/japan-1366873_1280.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  filter: brightness(80%);
+}
+
+.main-banner .content {
+  color: white;
+  text-align: center;
+}
+
+.main-banner .content p {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.main-banner .content button {
+  border: 1px solid white;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+.main-banner .content button span {
+  background: linear-gradient(96deg, #6f019c 0%, #c6017e 135.12%);
+  -webkit-background-clip: -webkit-text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* idea */
+
+.city {
+  display: flex;
+  width: 100%;
+  overflow: auto;
+}
+
+.city .card {
+  width: 25%;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.city .card:nth-last-child(1) {
+  margin-right: 0px;
+}
+
+.city .card img {
+  width: 100%;
+  height: 150px;
+  display: block;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.city .card figcaption {
+  border-radius: 0px 0px 15px 15px;
+  height: calc(150px - calc(24px * 2));
+  padding: 24px 16px;
+  color: white;
+}
+
+.city .card figcaption p {
+  font-size: 2rem;
+  line-height: 3rem;
+  font-weight: bold;
+}
+
+.city .card figcaption span {
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 767px) {
+  .city .card {
+    margin-right: 15px;
+  }
+
+  .city .card figcaption p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding-bottom: 0.5rem;
+  }
+}
+
+/* express */
+
+.express {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 25px;
+  grid-template-areas:
+    "heading heading"
+    "div1 div2";
+
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 576px) {
+  .express {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+    grid-template-areas:
+      "heading"
+      "div1"
+      "div2";
+  }
+}
+
+.express .heading {
+  grid-area: heading;
+}
+
+.express .photoDiv {
+  height: calc(700px - calc(60px * 2));
+  padding: 60px;
+  border-radius: 14px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.express .photoDiv:nth-of-type(1) {
+  background-image: url(https://cdn.pixabay.com/photo/2016/02/04/16/52/men-1179452_1280.jpg);
+}
+
+.express .photoDiv:nth-of-type(2) {
+  background-image: url(https://cdn.pixabay.com/photo/2018/01/01/01/57/woman-3053492_1280.jpg);
+}
+
+.express .photoDiv p {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 3rem;
+}
+
+.express .photoDiv button {
+  color: black;
+  font-weight: bold;
+  border: none;
+  background-color: white;
+  padding: 15px 23px;
+  border-radius: 7px;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.express .photoDiv button:hover {
+  background-color: lightgray;
 }

@@ -1,0 +1,63 @@
+@charset "UTF-8";
+/* extend : css 스타일 확장 */
+/* % : 임시 클래스 */
+.btn1, .btn2 {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #e2e2e2;
+  border: 1px solid lightgray;
+  border-radius: 14px;
+}
+
+.btn1, .btn2 {
+  border: 1px solid blue;
+  color: blue;
+  font-weight: bold;
+}
+
+.btn2 {
+  color: red;
+  border: 1px solid red;
+  font-weight: bold;
+}
+
+/* mixin */
+.btn3 {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #e2e2e2;
+  border: 1px solid lightgray;
+  border-radius: 14px;
+  border: 1px solid red;
+  color: red;
+}
+
+.btn4 {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #e2e2e2;
+  border: 1px solid lightgray;
+  border-radius: 14px;
+  border: 1px solid blue;
+  color: blue;
+}
+
+.btn5 {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #e2e2e2;
+  border: 1px solid lightgray;
+  border-radius: 14px;
+  border: 1px solid black;
+  color: black;
+}
+
+.btn6 {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #e2e2e2;
+  border: 1px solid lightgray;
+  border-radius: 14px;
+  border: 1px solid black;
+  color: green;
+}

@@ -1,0 +1,8 @@
+@charset "UTF-8";
+/* operator : 연산자, + - * */
+.box {
+  width: 100px;
+  height: 100px;
+  border: 1px solid red;
+  color: green;
+}

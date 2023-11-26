@@ -1,0 +1,54 @@
+/* extend : css 스타일 확장 */
+
+/* % : 임시 클래스 */
+
+%btn {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #e2e2e2;
+  border: 1px solid lightgray;
+  border-radius: 14px;
+}
+
+.btn1 {
+  @extend %btn;
+  border: 1px solid blue;
+  color: blue;
+  font-weight: bold;
+}
+
+.btn2 {
+  @extend .btn1;
+  color: red;
+  border: 1px solid red;
+  font-weight: bold;
+}
+
+/* mixin */
+
+@mixin 버튼($테두리: black, $글자색: black) {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #e2e2e2;
+  border: 1px solid lightgray;
+  border-radius: 14px;
+
+  border: 1px solid $테두리;
+  color: $글자색;
+}
+
+.btn3 {
+  @include 버튼(red, red);
+}
+
+.btn4 {
+  @include 버튼(blue, blue);
+}
+
+.btn5 {
+  @include 버튼();
+}
+
+.btn6 {
+  @include 버튼($글자색: green);
+}

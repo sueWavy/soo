@@ -1,0 +1,12 @@
+/* operator : 연산자, + - * */
+
+@use "test" as c;
+@use "sass:math";
+
+.box {
+  width: math.div(200px, 2);
+  height: 100px;
+  border: 1px solid red;
+
+  color: c.$변수;
+}

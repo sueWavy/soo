@@ -5,23 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      .test {
-        background-color: blueviolet;
+      .box {
+        background-color: black;
+        width: 500px;
+        height: 800px;
+        margin: 0 auto;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
+
+      .box * {
+        margin-top: 20px;
+      }
+
+      .box span {
+        background-color: yellow;
+        width: 200px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* .box span:first-child {
+        margin-top: 0;
+      } */
 
       .first {
-        margin-bottom: 5rem;
-      }
-
-      .second {
-        margin-top: 5rem;
+        margin-top: 0;
       }
     </style>
   </head>
   <body>
-    <div class="test">
-      <p class="first">코딩</p>
-      <p class="second">코딩2</p>
+    <div class="box">
+      <span class="first">first span</span>
+      <span>second span</span>
+      <span>third span</span>
     </div>
   </body>
 </html>

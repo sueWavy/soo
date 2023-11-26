@@ -1,0 +1,10 @@
+.box {
+  padding: 1rem;
+  width: 100px;
+  height: auto;
+  border: 1rem solid black;
+  background-color: blue;
+}
+.box p {
+  color: yellow;
+}

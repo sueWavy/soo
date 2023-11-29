@@ -18,7 +18,7 @@
 }
 
 .btn2 {
-  @extend .btn1;
+  @extend %btn;
   color: red;
   border: 1px solid red;
   font-weight: bold;

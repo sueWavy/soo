@@ -9,13 +9,21 @@ function increaseValue(button) {
   updateGraph(button);
 }
 
+// function resetGraphs() {
+//   graphWidths.button1 = 0;
+//   graphWidths.button2 = 0;
+//   graphWidths.button3 = 0;
+//   updateGraph("button1");
+//   updateGraph("button2");
+//   updateGraph("button3");
+// }
+
+const graphButtons = ["button1", "button2", "button3"];
 function resetGraphs() {
-  graphWidths.button1 = 0;
-  graphWidths.button2 = 0;
-  graphWidths.button3 = 0;
-  updateGraph("button1");
-  updateGraph("button2");
-  updateGraph("button3");
+  graphButtons.forEach((button) => {
+    graphWidths[button] = 0;
+    updateGraph(button);
+  });
 }
 
 function updateGraph(button) {

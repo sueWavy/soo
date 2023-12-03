@@ -1,0 +1,28 @@
+#container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+button {
+  margin: 5px;
+  padding: 10px;
+}
+
+.graph {
+  margin-top: 0.5rem;
+  height: 30px;
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+#graph-button1 {
+  background-color: #3498db;
+}
+
+#graph-button2 {
+  background-color: #e74c3c;
+}
+
+#graph-button3 {
+  background-color: #2ecc71;
+}

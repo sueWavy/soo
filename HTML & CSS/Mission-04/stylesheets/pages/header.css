@@ -1,1 +1,84 @@
 /* 헤더 */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.login-bar {
+  display: flex;
+  align-items: center;
+
+  width: 1020px;
+  height: 24px;
+  border: 1px solid black;
+  padding: 8px;
+  font-size: 12px;
+}
+
+.login-bar li {
+  margin-right: 8px;
+}
+
+.login-bar li:nth-child(1) {
+  order: 3;
+}
+
+.login-bar li:nth-child(2) {
+  order: 4;
+}
+
+.login-bar li:nth-child(3) {
+  order: 5;
+}
+
+.login-bar li:nth-child(4) {
+  order: 2;
+  margin-right: 736px;
+}
+
+.login-bar li:nth-child(5) {
+  order: 1;
+}
+
+.nav {
+  display: grid;
+  width: 100%;
+  border: 1px solid blue;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "category" "logo" "search" "search" "search" "my" "cart"
+    "category" "list" "list" "list" "list" "my" "cart";
+}
+
+.button-category {
+  grid-area: category;
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.search-box {
+  grid-area: search;
+}
+
+.my-coupang {
+  grid-area: my;
+}
+
+.cart {
+  grid-area: cart;
+}
+
+.list {
+  grid-area: list;
+}

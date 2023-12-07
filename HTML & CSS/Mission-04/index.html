@@ -13,7 +13,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./stylesheets/main.css" />
-    <script src="/js/main.js" defer></script>
+    <script src="./js/main.js" defer></script>
   </head>
 
   <body>
@@ -26,53 +26,85 @@
         <li><a href="/">제휴마케팅</a></li>
       </ul>
       <div class="nav">
-        <button class="button-category">카테고리</button>
+        <button class="button-category">
+          <span class="category-logo"></span>
+          <p>카테고리</p>
+        </button>
         <h1 class="logo">
           <a
             href="https://www.coupang.com/?src=1042016&spec=10304903&addtag=900&ctag=HOME&lptag=%EC%BF%A0%ED%8C%A1&itime=20231207204530&pageType=HOME&pageValue=HOME&wPcid=26708421520023350011259&wRef=www.google.com&wTime=20231207204530&redirect=landing&gclid=CjwKCAiA98WrBhAYEiwA2WvhOl3ZnHqEO6JHnCnFcRYGPYhOzCfx7DNYerrXVraDpKRxg_eOiDoEKxoCLgsQAvD_BwE&mcid=0734a5bd6c7a490caeef842fc39b4ecb&network=g"
             target="_blank"
           >
-            <img src="./assets/logo/logo.png" alt="" />
+            <img src="./assets/logo/logo.svg" />
           </a>
         </h1>
         <form class="search-box">
-          <select name="" id="">
-            <option value="">전체</option>
-          </select>
+          <div class="drop-menu">
+            <select name="" id="">
+              <option value="">전체</option>
+            </select>
+            <span class="drop-arrow">
+              <img src="./assets/icon/MoreDown.png" />
+            </span>
+          </div>
           <input
+            class="search-bar"
             type="search"
             name="q"
             required
             placeholder="찾고 싶은 상품을 검색해 보세요!"
           />
-          <button><img src="./assets/icon/mic.svg" alt="" /></button>
-          <button><img src="./assets/icon/search.svg" alt="" /></button>
+          <button aria-label="mic-search">
+            <img src="./assets/icon/mic.svg" />
+          </button>
+          <button aria-label="keyword-search">
+            <img src="./assets/icon/search.svg" />
+          </button>
         </form>
-        <div class="my-coupang">
-          <button>마이쿠팡</button>
-          <!-- <ul>
-              <li><a href="/">주문목록</a></li>
-              <li><a href="/">취소/환불</a></li>
-              <li><a href="/">찜리스트</a></li>
-            </ul> -->
+        <div class="myCoupang">
+          <button>
+            <img src="./assets/icon/my-coupang.svg" />
+            <p>마이쿠팡</p>
+          </button>
+          <ul>
+            <li><a href="/">주문목록</a></li>
+            <li><a href="/">취소/환불</a></li>
+            <li><a href="/">찜리스트</a></li>
+          </ul>
         </div>
         <div class="cart">
           <button>
-            <a href="/"><img src="./assets/icon/cart.svg" alt="" /></a>
+            <a href="/"
+              ><img src="./assets/icon/cart.svg" />
+              <p>장바구니</p></a
+            ><span>0</span>
           </button>
+          <div class="info">
+            <p>장바구니에 담긴 상품이 없습니다.</p>
+          </div>
         </div>
 
         <ul class="list">
           <li>
-            <a href="/"><img src="./assets/icon/icon-rocket.svg" />로켓배송</a>
-          </li>
-          <li>
             <a href="/"
-              ><img src="./assets/icon/icon-rocket.svg" />로켓프레시</a
+              ><img
+                src="./assets/icon/icon-rocket.svg"
+                alt="rocket-delivery"
+              />로켓배송</a
             >
           </li>
           <li>
-            <a href="/">2022년 설날<img src="./assets/icon/new.svg" /></a>
+            <a href="/"
+              ><img
+                src="./assets/icon/icon-rocket.svg"
+                alt="rocket-fresh"
+              />로켓프레시</a
+            >
+          </li>
+          <li>
+            <a href="/"
+              >2022년 설날<img src="./assets/icon/new.svg" alt="new item"
+            /></a>
           </li>
           <li>
             <a href="/"> 로켓직구 </a>

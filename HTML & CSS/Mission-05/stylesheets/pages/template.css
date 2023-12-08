@@ -8,10 +8,15 @@
 
 .wrapper {
   margin: 0 auto;
-  width: 1020px;
+  width: 100%;
 }
 /* ---------------------------------------------- */
 /* 헤더                                            */
+header {
+  width: 1020px;
+  margin: 0 auto;
+}
+
 .header__inner {
   display: flex;
   align-items: center;
@@ -36,12 +41,9 @@
 /* ---------------------------------------------- */
 /* 내비게이션                                        */
 
-.navigation .navigation__inner {
-  display: none;
-}
-
-.is--active .navigation__inner {
-  display: block;
+nav {
+  width: 1020px;
+  margin: 0 auto;
 }
 
 i {
@@ -60,12 +62,6 @@ i {
   width: 7px;
   height: 10px;
   background-image: url("../../assets/icon/more-right-active.svg");
-}
-
-.navigation {
-  width: 300px;
-  height: 300px;
-  background-color: red;
 }
 
 .navigation__list li img {
@@ -133,4 +129,138 @@ i {
 
 /* ---------------------------------------------- */
 /* 푸터                                            */
+
+footer {
+  width: 100%;
+  color: var(--color-gray-800);
+}
+
+.top-box {
+  background-color: var(--color-gray-200);
+  display: flex;
+  justify-content: center;
+}
+
+.top-box-item {
+  width: 1006px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.middle-box {
+  display: flex;
+  justify-content: center;
+  height: 207px;
+  background-color: white;
+  border: 1px solid blue;
+}
+
+.middle-items {
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.middle-box h1 {
+  margin-top: -18px;
+  color: #aaa9a9;
+  font-size: 50px;
+}
+
+.middle-info {
+  width: 270px;
+  height: 143px;
+  font-size: 16px;
+}
+
+.middle-info p {
+  margin-top: 13px;
+  font-size: 16px;
+}
+
+.middle-info p:nth-child(1) {
+  margin-top: 0px;
+}
+
+.middle-service {
+  width: 295px;
+}
+
+.middle-service b,
+.middle-service p {
+  font-size: 16px;
+}
+
+.service-top {
+  display: flex;
+  justify-content: start;
+  margin-bottom: 8px;
+}
+
+.divider2 {
+  margin-left: 13px;
+  margin-right: 13px;
+}
+
+.service-middle h2 {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.service-middle p {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.middle-notice button {
+  font-size: 16px;
+}
+
+.middle-notice p {
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+.bottom-box {
+  background-color: var(--color-gray-900);
+  height: 102px;
+  display: flex;
+  justify-content: center;
+  padding: 16px 0;
+}
+
+.bottom-box p {
+  font-size: 12px;
+  color: var(--color-gray-200);
+}
+
+.icons {
+  margin-left: 50px;
+  align-self: end;
+}
+
+.icons a {
+  margin-right: 10px;
+}
+
+.insta img {
+  background: radial-gradient(
+      circle farthest-corner at 32% 106%,
+      #ffe17d 0%,
+      #ffcd69 10%,
+      #fa9137 28%,
+      #eb4141 42%,
+      transparent 82%
+    ),
+    linear-gradient(135deg, #234bd7 12%, #c33cbe 58%);
+
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+}
 /* ---------------------------------------------- */

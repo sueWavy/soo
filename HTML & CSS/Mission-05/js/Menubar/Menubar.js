@@ -1,4 +1,4 @@
-import { MenubarItem } from './MenubarItem.js';
+import { MenubarItem } from "./MenubarItem.js";
 
 /* -------------------------------------------------------------------------- */
 /* Menubar                                                                    */
@@ -7,26 +7,26 @@ import { MenubarItem } from './MenubarItem.js';
 export class Menubar {
   static defaultOptions = {
     openner: null,
-    activeClass: 'is--active',
+    activeClass: "is--active",
   };
 
   constructor(domNode, options = {}) {
-    let msgPrefix = 'Menubar 클래스 menubarNode 전달인자';
+    let msgPrefix = "Menubar 클래스 menubarNode 전달인자";
 
     if (!(domNode instanceof Element)) {
-      throw new TypeError(msgPrefix + '는 DOM 요소가 아닙니다.');
+      throw new TypeError(msgPrefix + "는 DOM 요소가 아닙니다.");
     }
 
     if (domNode.childElementCount === 0) {
-      throw new Error(msgPrefix + '는 요소 자식을 포함하지 않습니다.');
+      throw new Error(msgPrefix + "는 요소 자식을 포함하지 않습니다.");
     }
 
     let e = domNode.firstElementChild;
 
     while (e) {
       let menubarItem = e.firstElementChild;
-      if (e && menubarItem && menubarItem.tagName !== 'A') {
-        throw new Error(msgPrefix + '의 자식 요소가 A 요소가 아닙니다.');
+      if (e && menubarItem && menubarItem.tagName !== "A") {
+        throw new Error(msgPrefix + "의 자식 요소가 A 요소가 아닙니다.");
       }
       e = e.nextElementSibling;
     }
@@ -57,7 +57,7 @@ export class Menubar {
     while (elem) {
       let menuElement = elem.firstElementChild;
 
-      if (elem && menuElement && menuElement.tagName === 'A') {
+      if (elem && menuElement && menuElement.tagName === "A") {
         menubarItem = new MenubarItem(menuElement, this);
         menubarItem.init();
         this.menubarItems.push(menubarItem);
@@ -106,12 +106,12 @@ export class Menubar {
 
     let categoryHasHover = false;
 
-    openner.addEventListener('mouseenter', () => {
+    openner.addEventListener("mouseenter", () => {
       categoryHasHover = true;
       this.open();
     });
 
-    openner.addEventListener('keydown', (event) => {
+    openner.addEventListener("keydown", (event) => {
       if (event.keyCode == 13) {
         // Enter
         categoryHasHover = true;
@@ -123,7 +123,7 @@ export class Menubar {
       }
     });
 
-    openner.addEventListener('mouseleave', () => {
+    openner.addEventListener("mouseleave", () => {
       categoryHasHover = false;
       setTimeout(() => {
         if (!categoryHasHover) {
@@ -135,11 +135,11 @@ export class Menubar {
 
     let navigationInner = domNode.parentNode;
 
-    navigationInner.addEventListener('mouseenter', () => {
+    navigationInner.addEventListener("mouseenter", () => {
       categoryHasHover = true;
     });
 
-    navigationInner.addEventListener('mouseleave', () => {
+    navigationInner.addEventListener("mouseleave", () => {
       this.close();
       categoryHasHover = false;
     });
@@ -152,7 +152,7 @@ export class Menubar {
       let mbi = this.menubarItems[i];
 
       if (mbi.domNode.tabIndex == 0) {
-        flag = mbi.domNode.getAttribute('aria-expanded') === 'true';
+        flag = mbi.domNode.getAttribute("aria-expanded") === "true";
       }
 
       mbi.domNode.tabIndex = -1;

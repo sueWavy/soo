@@ -1,9 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+
 * {
   list-style: none;
   font-size: 12px;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Noto+Sans+KR";
 }
 
 .wrapper {
@@ -155,7 +158,6 @@ footer {
   justify-content: center;
   height: 207px;
   background-color: white;
-  border: 1px solid blue;
 }
 
 .middle-items {
@@ -167,9 +169,7 @@ footer {
 }
 
 .middle-box h1 {
-  margin-top: -18px;
-  color: #aaa9a9;
-  font-size: 50px;
+  margin-top: -3px;
 }
 
 .middle-info {
@@ -207,9 +207,10 @@ footer {
   margin-right: 13px;
 }
 
-.service-middle h2 {
-  font-size: 48px;
+.service-middle a h2 {
   margin-bottom: 12px;
+  font-size: var(--font-family);
+  font-size: 48px;
 }
 
 .service-middle p {

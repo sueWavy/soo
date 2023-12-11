@@ -13,7 +13,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="././stylesheets/main.css" />
-    <link rel="stylesheet" href="./stylesheets/style.css" />
+    <link rel="stylesheet" href="././stylesheets/pages/iconfont.css" />
     <script type="module" src="./js/main.js"></script>
   </head>
 
@@ -26,7 +26,7 @@
         <div class="header__inner">
           <!-- 카테고리 버튼은 .header__inner 영역 안에 마크업 해주세요. -->
           <button class="button--category">
-            <img src="./assets/icon/hamburger.svg" />
+            <img src="./assets/icon/hamburger.svg" alt="category button" />
             <p>카테고리</p>
           </button>
         </div>
@@ -40,45 +40,77 @@
           <!-- 카테고리별 내비게이션(메뉴) 영역 -->
           <ul class="navigation__list depth_1">
             <li class="top-list">
-              <a href="/" role="button"
+              <a href="/" role="button" class="top-item1"
                 ><i class="icon-clothes"></i>패션의류/잡화<span
                   class="arrow"
                 ></span
               ></a>
-            </li>
-            <ul class="navigation__list depth_2">
-              <li class="top-list">
-                <a href="/" role="button"
-                  >여성패션<span class="arrow"></span
-                ></a>
-              </li>
-              <ul class="navigation__list depth_3">
-                <li>
-                  <a href="/">의류</a>
+              <!-- depth2 -->
+              <ul class="navigation__list depth_2">
+                <li class="top-list">
+                  <a href="/" role="button" class="top-item2"
+                    >여성패션<span class="arrow"></span
+                  ></a>
+                  <!-- depth3 -->
+                  <ul class="navigation__list depth_3">
+                    <li>
+                      <a href="/">의류</a>
+                    </li>
+                    <li><a href="/">속옷/잠옷</a></li>
+                    <li><a href="/">신발</a></li>
+                  </ul>
                 </li>
-                <li><a href="/">속옷/잠옷</a></li>
-                <li><a href="/">신발</a></li>
+                <li><a href="/">남성패션</a></li>
+                <li><a href="/">유아동패션</a></li>
               </ul>
-              <li>남성패션</li>
-              <li>유아동패션</li>
-            </ul>
-            <li><i class="icon-beauty"></i>뷰티</li>
-            <li><i class="icon-baby"></i>출산유아동</li>
-            <li><i class="icon-foods"></i>식품</li>
-            <li><i class="icon-kitchenware"></i>주방용품</li>
-            <li><i class="icon-houseware"></i>생활용품</li>
-            <li><i class="icon-interior"></i>홈인테리어</li>
-            <li><i class="icon-appliances"></i>가전디지털</li>
-            <li><i class="icon-sports"></i>스포츠</li>
-            <li><i class="icon-car"></i>자동차용품</li>
-            <li><i class="icon-book"></i>도서음반</li>
-            <li><i class="icon-toy"></i>완구취미</li>
-            <li><i class="icon-stationery"></i>문구오피스</li>
-            <li><i class="icon-pet"></i>반려동물</li>
-            <li><i class="icon-travel"></i>여행티켓</li>
+            </li>
             <li>
-              <i class="icon-theme"></i>테마관
-              <img src="./assets/icon/new.svg" />
+              <a href="/"><i class="icon-beauty"></i>뷰티</a>
+            </li>
+            <li>
+              <a href="/"><i class="icon-baby"></i>출산유아동</a>
+            </li>
+            <li>
+              <a href="/"><i class="icon-foods"></i>식품</a>
+            </li>
+            <li>
+              <a href="/"><i class="icon-kitchenware"></i>주방용품</a>
+            </li>
+            <li>
+              <a href="/"><i class="icon-houseware"></i>생활용품</a>
+            </li>
+            <li>
+              <a href="/"><i class="icon-interior"></i>홈인테리어</a>
+            </li>
+            <li>
+              <a href="/"><i class="icon-appliances"></i>가전디지털</a>
+            </li>
+            <li>
+              <a href="/"><i class="icon-sports"></i>스포츠</a>
+            </li>
+            <li>
+              <a href="/"><i class="icon-car"></i>자동차용품</a>
+            </li>
+            <li>
+              <a href="/"><i class="icon-book"></i>도서음반</a>
+            </li>
+            <li>
+              <a href="/"><i class="icon-toy"></i>완구취미</a>
+            </li>
+            <li>
+              <a href="/"><i class="icon-stationery"></i>문구오피스</a>
+            </li>
+            <li>
+              <a href="/"><i class="icon-pet"></i>반려동물</a>
+            </li>
+            <li>
+              <a href="/"><i class="icon-travel"></i>여행티켓</a>
+            </li>
+            <li>
+              <a href="/">
+                <i class="icon-theme"></i>테마관
+                <img src="./assets/icon/new.svg"
+              /></a>
             </li>
           </ul>
         </div>
@@ -117,7 +149,7 @@
         </div>
         <div class="middle-box">
           <div class="middle-items">
-            <h1><img src="./assets/logo/logo-mono.svg" alt="" /></h1>
+            <h1><img src="./assets/logo/logo-mono.svg" alt="logo" /></h1>
             <div class="middle-info">
               <p>상호명 및 호스팅 서비스 제공 : 쿠팡(주)</p>
               <p>대표이사 : 강현승, 박대준</p>
@@ -163,14 +195,26 @@
             Copyright ⓒ Coupang Corp. 2010-2020 All Right Reserved.
           </p>
           <div class="icons">
-            <a href="https://www.facebook.com/" target="_blank"
-              ><img src="./assets/icon/sns-facebook.svg" alt=""
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+              ><img src="./assets/icon/sns-facebook.svg" alt="facebook link"
             /></a>
-            <a href="https://section.blog.naver.com/" target="_blank"
-              ><img src="./assets/icon/sns-naver-blog.svg" alt=""
+            <a
+              href="https://section.blog.naver.com/"
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+              ><img
+                src="./assets/icon/sns-naver-blog.svg"
+                alt="naver blog link"
             /></a>
-            <a class="insta" href="https://www.instagram.com/" target="_blank"
-              ><img src="./assets/icon/sns-instagram.svg" alt=""
+            <a
+              class="insta"
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+              ><img src="./assets/icon/sns-instagram.svg" alt="instagram link"
             /></a>
           </div>
         </div>

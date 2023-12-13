@@ -34,8 +34,7 @@ header {
   color: var(--couGray);
 }
 
-.sub-title h3::after {
-  content: "|";
+.divider {
   margin-left: 10px;
   margin-right: 10px;
   color: var(--couGray);

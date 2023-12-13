@@ -124,3 +124,27 @@ main {
 .ranks {
   height: 12px;
 }
+
+.rating-stars {
+  width: 68px;
+  height: 12px;
+  background-image: url("../../assets/sprites/rating-stars.png");
+  background-repeat: no-repeat;
+  background-position: 10% 91%;
+}
+
+.rating-stars2 {
+  width: 68px;
+  height: 12px;
+  background-image: url("../../assets/sprites/rating-stars.png");
+  background-repeat: no-repeat;
+  background-position: 10% 80%;
+}
+
+.rating-stars3 {
+  width: 68px;
+  height: 12px;
+  background-image: url("../../assets/sprites/rating-stars.png");
+  background-repeat: no-repeat;
+  background-position: 10% 100%;
+}

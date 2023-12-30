@@ -72,7 +72,6 @@ export default App;
 /**
  * Axios
  * axios는 json을 자동으로 적용해서 response 객체를 바로 전달.
- * 요청을 중도 cancel 하거나 응답시간 초과 등의 설정 기능 등이 있다. (fetch에는 존재하지 않는 기능이 많다.)
  * yarn add axios, npm i axios 등 설치 후 import 해줘야한다.
  */
 
@@ -99,3 +98,14 @@ async function data() {
     console.error(error);
   }
 }
+
+// axios
+const data2 = async () => {
+  try {
+    const res = await axios.get("https://jsonplaceholder.typicode.com/posts");
+    setData(res.data);
+    console.log(res);
+  } catch (error) {
+    console.error(error);
+  }
+};

@@ -85,27 +85,27 @@ export default App;
  */
 
 // fetch
-async function data() {
-  try {
-    const res = await fetch("https://jsonplaceholder.typicode.com/posts");
-    if (!res.ok) {
-      throw new Error("에러 발생");
-    }
-    const data = await res.json();
-    setData(data);
-    console.log(data);
-  } catch (error) {
-    console.error(error);
-  }
-}
+// async function data() {
+//   try {
+//     const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+//     if (!res.ok) {
+//       throw new Error("에러 발생");
+//     }
+//     const data = await res.json();
+//     setData(data);
+//     console.log(data);
+//   } catch (error) {
+//     console.error(error);
+//   }
+// }
 
-// axios
-const data2 = async () => {
-  try {
-    const res = await axios.get("https://jsonplaceholder.typicode.com/posts");
-    setData(res.data);
-    console.log(res);
-  } catch (error) {
-    console.error(error);
-  }
-};
+// // axios
+// const data2 = async () => {
+//   try {
+//     const res = await axios.get("https://jsonplaceholder.typicode.com/posts");
+//     setData(res.data);
+//     console.log(res);
+//   } catch (error) {
+//     console.error(error);
+//   }
+// };

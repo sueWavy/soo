@@ -10,7 +10,7 @@ function App() {
     const getData = async () => {
       try {
         const res = await axios.get(
-          "https://9041fdb3-7806-40ba-99e2-7feaf03cb3c4.mock.pstmn.io/list"
+          "https://9041fdb3-7806-40ba-99e2-7feaf03cb3c4.mock.pstmn.io/lists"
         );
         setData(res.data);
         console.log("서버 Get 통신", res);
@@ -28,7 +28,7 @@ function App() {
 
     try {
       const res = await axios.post(
-        "https://9041fdb3-7806-40ba-99e2-7feaf03cb3c4.mock.pstmn.io/list"
+        "https://9041fdb3-7806-40ba-99e2-7feaf03cb3c4.mock.pstmn.io/lists"
       );
       setData([...data, res.data]);
       console.log("Server Communication", res);

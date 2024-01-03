@@ -4,11 +4,11 @@
 
 | 학습 내용                     | 진행도 |
 | :---------------------------- | :----: |
-| HTML & CSS                    |  ing   |
+| HTML & CSS                    |  done  |
 | SASS (SCSS)                   |  ing   |
 | Javascript                    |  ing   |
 | Typescript                    |  wait  |
-| React                         |  wait  |
+| React                         |  ing   |
 | React-Query                   |  wait  |
-| React-Recoil                  |  wait  |
+| Zustand                       |  wait  |
 | 배포(AWS,Firebase,netlify 등) |  wait  |

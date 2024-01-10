@@ -1,0 +1,18 @@
+#loading-message {
+  text-align: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}
+
+#content-container {
+  margin-top: 20px;
+}
+
+.post-item {
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding: 10px;
+  height: 160px;
+}

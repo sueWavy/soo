@@ -6,7 +6,11 @@ function answer(user) {
 
   // 코드 구현 시작 영역
 
-  // …
+  if (user.height > 150) {
+    permit = true;
+  } else {
+    permit = false;
+  }
 
   // 코드 구현 종료 영역
 

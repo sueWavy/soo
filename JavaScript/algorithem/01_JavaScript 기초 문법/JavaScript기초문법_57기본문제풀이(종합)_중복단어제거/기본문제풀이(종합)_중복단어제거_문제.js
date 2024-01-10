@@ -5,9 +5,7 @@ function answer(arr) {
   let new_arr = [];
 
   // 코드 구현 시작 영역
-
-  // …
-
+  new_arr = Array.from(new Set(arr));
   // 코드 구현 종료 영역
 
   return new_arr;

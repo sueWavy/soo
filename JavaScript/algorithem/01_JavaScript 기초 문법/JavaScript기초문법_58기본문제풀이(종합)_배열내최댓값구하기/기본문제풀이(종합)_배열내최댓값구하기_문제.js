@@ -2,11 +2,15 @@
 
 /* user code */
 function answer(arr) {
-  let max;
+  let max = arr[0];
 
   // 코드 구현 시작 영역
 
-  // …
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i];
+    }
+  }
 
   // 코드 구현 종료 영역
 

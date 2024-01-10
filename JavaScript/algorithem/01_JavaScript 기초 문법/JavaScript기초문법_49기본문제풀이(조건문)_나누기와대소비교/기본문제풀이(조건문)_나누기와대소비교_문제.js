@@ -6,8 +6,13 @@ function answer(a, b, c, d) {
 
   // 코드 구현 시작 영역
 
-  // …
-
+  if (a / b > c / d) {
+    result = 1;
+  } else if (a / b == c / d) {
+    result = 0;
+  } else {
+    result = -1;
+  }
   // 코드 구현 종료 영역
 
   return result;

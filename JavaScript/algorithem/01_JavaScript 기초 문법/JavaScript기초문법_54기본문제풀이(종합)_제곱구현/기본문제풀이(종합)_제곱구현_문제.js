@@ -5,9 +5,9 @@ function answer(x, y) {
   let result = 1;
 
   // 코드 구현 시작 영역
-
-  // …
-
+  for (let i = 0; i < y; i++) {
+    result *= x;
+  }
   // 코드 구현 종료 영역
 
   return result;

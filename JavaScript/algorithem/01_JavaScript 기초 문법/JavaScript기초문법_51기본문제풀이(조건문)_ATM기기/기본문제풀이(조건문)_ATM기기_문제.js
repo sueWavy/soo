@@ -6,7 +6,13 @@ function answer(withdraw, total) {
 
   // 코드 구현 시작 영역
 
-  // …
+  if (withdraw % 5 != 0) {
+    result = total;
+  } else if (withdraw + 0.5 > total) {
+    result = total;
+  } else {
+    result = total - withdraw + 0.5;
+  }
 
   // 코드 구현 종료 영역
 

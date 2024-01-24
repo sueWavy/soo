@@ -1,7 +1,7 @@
 // do something!
 
-const CONTAINER_DEFAULT_CLASS_NAME = "star-rating-container";
-const CSS_DEFAULT_THEME = "star-rating/theme.css";
+const class_name = "star-rating-container";
+const css_theme = "star-rating/theme.css";
 
 const loadStyle = (href) => {
   if (document.querySelector(`link[href="${href}"]`)) return;
@@ -11,7 +11,6 @@ const loadStyle = (href) => {
   $link.rel = "stylesheet";
 
   const $lastLink = document.createElement("link:last-of-type");
-
   document.head.insertBefore($link, $lastLink.nextElementSibling);
 };
 
@@ -19,11 +18,11 @@ const render = ($container) => {
   const { maxRating = 5 } = $container.dataset;
 
   if (maxRating === "0") {
-    throw new Error(`Star-rating 컴포넌트의 최소 max는 1 이상이어야 합니다.`);
+    throw new Error(`최소 max는 1 이상!`);
   }
 
   $container.innerHTML = `
-  <div class=${CONTAINER_DEFAULT_CLASS_NAME}>
+  <div class=${class_name}>
     ${Array.from(
       { length: maxRating },
       (_, i) => `<i class="bx bxs-star" data-value="${i + 1}"></i>`
@@ -33,7 +32,7 @@ const render = ($container) => {
 };
 
 const StarRating = ($container) => {
-  loadStyle(CSS_DEFAULT_THEME);
+  loadStyle(css_theme);
   render($container);
 
   const $stars = [...$container.querySelectorAll("i")];

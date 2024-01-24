@@ -1,28 +1,27 @@
 // do something!
 
-import { saveState, loadState } from "./state.js";
+import { saveToggle, loadToggle } from "./toggle.js";
 
 const $nav = document.querySelector("nav");
-let isNavOpen = false;
+let isOpen = false;
 
-window.addEventListener("DOMContentLoaded", () => {
-  const state = loadState();
+const toggle = loadToggle();
 
-  if (null === state) {
-    isNavOpen = false;
-  } else {
-    isNavOpen = state.isNavOpen;
-  }
-  $nav.classList.toggle("active", isNavOpen);
-  document.body.style.visibility = "visible";
-});
+if (null === toggle) {
+  isOpen = false;
+} else {
+  isOpen = toggle.isOpen;
+}
+
+$nav.classList.toggle("active", isOpen);
+document.body.style.visibility = "visible";
 
 window.addEventListener("beforeunload", () => {
-  saveState({ isNavOpen });
+  saveToggle({ isOpen });
 });
 
 document.querySelector(".toggle").addEventListener("click", () => {
-  isNavOpen = !isNavOpen;
+  isOpen = !isOpen;
   document.body.classList.remove("preload");
-  $nav.classList.toggle("active", isNavOpen);
+  $nav.classList.toggle("active", isOpen);
 });

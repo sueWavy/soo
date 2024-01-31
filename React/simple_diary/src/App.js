@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import "./App.css";
 import DiaryEditor from "./components/DiaryEditor";
 import DiaryList from "./components/DiaryList";
+import OptimizeTest from "./OptimizeTest";
 
 function App() {
   // 일기 데이터 state 상태관리
@@ -46,7 +47,6 @@ function App() {
 
   /** 일기 삭제 기능 */
   const onDelete = (targetId) => {
-    console.log(`${targetId}가 삭제되었습니다.`);
     const newDiaryList = data.filter((it) => it.id !== targetId);
     setData(newDiaryList);
   };
@@ -60,9 +60,8 @@ function App() {
     );
   };
 
+  /** useMemo : 최적화 기능 (답을 기억했다가 바로 적는다 = 같은 답일 경우 리랜더링 X) */
   const getDiaryAnalysis = useMemo(() => {
-    console.log("일기 분석 시작");
-
     const goodCount = data.filter((it) => it.emotion >= 3).length;
     const badCount = data.length - goodCount;
     const goodRatio = Math.round((goodCount / data.length) * 100);
@@ -73,12 +72,13 @@ function App() {
 
   return (
     <div className="App">
+      <OptimizeTest />
       <DiaryEditor onCreate={onCreate} />
       <div style={{ textAlign: "center" }}>
         <br />
-        <div>전체 일기 : {data.length}</div>
-        <div>좋은 일기 : {goodCount}</div>
-        <div>나쁜 일기 : {badCount}</div>
+        <div>전체 일기 : {data.length}개</div>
+        <div>좋은 일기 : {goodCount}개</div>
+        <div>나쁜 일기 : {badCount}개</div>
         <div>좋은 비율 : {goodRatio}%</div>
       </div>
       <DiaryList diaryList={data} onDelete={onDelete} onEdit={onEdit} />

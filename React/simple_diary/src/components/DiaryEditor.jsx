@@ -1,6 +1,8 @@
 import React, { useRef, useState } from "react";
 
+// onCreate 기능을 props 받아옴.
 export default function DiaryEditor({ onCreate }) {
+  /** 일기 작성 form 데이터 state */
   const [info, setInfo] = useState({
     author: "",
     content: "",
@@ -10,6 +12,7 @@ export default function DiaryEditor({ onCreate }) {
   const authorInput = useRef();
   const contentInput = useRef();
 
+  /** change 이벤트 처리 (입력) */
   const handleChange = (e) => {
     setInfo({
       ...info,
@@ -17,6 +20,7 @@ export default function DiaryEditor({ onCreate }) {
     });
   };
 
+  /** submit 이벤트 처리 (등록) */
   const handleSubmit = () => {
     if (info.author.length < 1) {
       authorInput.current.focus();
@@ -29,7 +33,6 @@ export default function DiaryEditor({ onCreate }) {
     }
 
     onCreate(info.author, info.content, info.emotion);
-    console.log("저장 성공");
     setInfo({
       author: "",
       content: "",

@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 
+// 부모에게 다이어리 데이터 el 및 기능들 props로 받아오기 (구조분해할당)
 export default function DiaryItem({
   author,
   content,
@@ -9,11 +10,13 @@ export default function DiaryItem({
   onDelete,
   onEdit,
 }) {
+  /** 수정 기능 on/off 토글 상태 및 변경 기능 */
   const [isEdit, setIsEdit] = useState(false);
   const toggleIsEdit = () => setIsEdit(!isEdit);
 
   const [localContent, setLocalContent] = useState(content);
 
+  /** 수정 화면 나갈 경우 exit 기능 */
   const handleQuitEdit = () => {
     setIsEdit(false);
     setLocalContent(content);
@@ -21,6 +24,7 @@ export default function DiaryItem({
 
   const localContentInput = useRef();
 
+  /** 수정 이벤트 처리 */
   const handleEdit = () => {
     if (localContent.length < 5) {
       localContentInput.current.focus();
@@ -33,6 +37,7 @@ export default function DiaryItem({
     }
   };
 
+  /** 삭제 이벤트 처리 */
   const handleDelete = () => {
     if (window.confirm(`${id}번쟤 일기를 삭제합니까?`)) {
       onDelete(id);

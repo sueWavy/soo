@@ -5,7 +5,7 @@
 | 학습 내용                     | 진행도 |
 | :---------------------------- | :----: |
 | HTML & CSS                    |  done  |
-| SASS (SCSS)                   |  ing   |
+| SASS (SCSS)                   |  done  |
 | Javascript                    |  ing   |
 | Typescript                    |  wait  |
 | React                         |  ing   |

@@ -1,8 +1,8 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import "./App.css";
 import DiaryEditor from "./components/DiaryEditor";
 import DiaryList from "./components/DiaryList";
-import OptimizeTest from "./OptimizeTest";
+// import OptimizeTest from "./OptimizeTest";
 
 function App() {
   // 일기 데이터 state 상태관리
@@ -32,7 +32,7 @@ function App() {
   }, []);
 
   /** 일기 생성 기능 */
-  const onCreate = (author, content, emotion) => {
+  const onCreate = useCallback((author, content, emotion) => {
     const created = new Date().getTime();
     const newItem = {
       author,
@@ -42,8 +42,10 @@ function App() {
       id: dataId.current,
     };
     dataId.current += 1;
-    setData([newItem, ...data]);
-  };
+    setData((data) => [newItem, ...data]);
+    // 함수형 업데이트 : 화살표 함수 (인자로 data) setState 상태변화 함수에 함수를 전달하는 걸 함수형 업데이트라고한다. -> 의존형배열을 비워놓을 수 있게된다.
+  }, []);
+  // 왜 useMemo가 아니라 useCallback인가? memo는 값을 반환하고 useCallback은 그 콜백 함수를 반환한다. (차이점 알기)
 
   /** 일기 삭제 기능 */
   const onDelete = (targetId) => {
@@ -72,7 +74,7 @@ function App() {
 
   return (
     <div className="App">
-      <OptimizeTest />
+      {/* <OptimizeTest /> */}
       <DiaryEditor onCreate={onCreate} />
       <div style={{ textAlign: "center" }}>
         <br />

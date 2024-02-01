@@ -1,7 +1,11 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 // onCreate 기능을 props 받아옴.
-export default function DiaryEditor({ onCreate }) {
+const DiaryEditor = ({ onCreate }) => {
+  useEffect(() => {
+    console.log("DiaryEditor render");
+  });
+
   /** 일기 작성 form 데이터 state */
   const [info, setInfo] = useState({
     author: "",
@@ -77,4 +81,6 @@ export default function DiaryEditor({ onCreate }) {
       </div>
     </div>
   );
-}
+};
+
+export default React.memo(DiaryEditor);

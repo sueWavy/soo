@@ -43,24 +43,25 @@ function App() {
     };
     dataId.current += 1;
     setData((data) => [newItem, ...data]);
-    // 함수형 업데이트 : 화살표 함수 (인자로 data) setState 상태변화 함수에 함수를 전달하는 걸 함수형 업데이트라고한다. -> 의존형배열을 비워놓을 수 있게된다.
+    // 함수형 업데이트 : 화살표 함수 (인자로 data) setState 상태변화 함수에 함수를 전달하는 걸 함수형 업데이트라고한다.
+    // -> 의존형배열을 비워놓을 수 있게된다.
   }, []);
   // 왜 useMemo가 아니라 useCallback인가? memo는 값을 반환하고 useCallback은 그 콜백 함수를 반환한다. (차이점 알기)
 
   /** 일기 삭제 기능 */
-  const onDelete = (targetId) => {
-    const newDiaryList = data.filter((it) => it.id !== targetId);
-    setData(newDiaryList);
-  };
+  const onDelete = useCallback((targetId) => {
+    // const newDiaryList = data.filter((it) => it.id !== targetId); // 전달을 함수형으로 변경 (함수형 업데이트로)
+    setData((data) => data.filter((it) => it.id !== targetId));
+  }, []);
 
   /** 일기 수정 기능 */
-  const onEdit = (targetId, newContent) => {
-    setData(
+  const onEdit = useCallback((targetId, newContent) => {
+    setData((data) =>
       data.map((it) =>
         it.id === targetId ? { ...it, content: newContent } : it
       )
     );
-  };
+  }, []);
 
   /** useMemo : 최적화 기능 (답을 기억했다가 바로 적는다 = 같은 답일 경우 리랜더링 X) */
   const getDiaryAnalysis = useMemo(() => {

@@ -1,7 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
+import { DiaryDispatchContext } from "../App";
 
-// onCreate 기능을 props 받아옴.
-const DiaryEditor = ({ onCreate }) => {
+const DiaryEditor = () => {
+  // useContext 로 onCreate 비구조화할당으로 받아오기
+  const { onCreate } = useContext(DiaryDispatchContext);
+
   useEffect(() => {
     console.log("DiaryEditor render");
   });

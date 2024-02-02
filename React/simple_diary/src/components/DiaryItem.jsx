@@ -1,18 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
+import { DiaryDispatchContext } from "../App";
 
 // 부모에게 다이어리 데이터 el 및 기능들 props로 받아오기 (구조분해할당)
-const DiaryItem = ({
-  author,
-  content,
-  created,
-  emotion,
-  id,
-  onDelete,
-  onEdit,
-}) => {
-  useEffect(() => {
-    console.log(`${id}번 째 아이템 랜더링`);
-  }, []);
+const DiaryItem = ({ author, content, created, emotion, id }) => {
+  // onDelete, onEdit useContext에서 받아오기
+  const { onDelete, onEdit } = useContext(DiaryDispatchContext);
 
   /** 수정 기능 on/off 토글 상태 및 변경 기능 */
   const [isEdit, setIsEdit] = useState(false);
